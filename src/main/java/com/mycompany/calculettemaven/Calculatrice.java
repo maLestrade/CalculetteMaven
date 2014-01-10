@@ -1,6 +1,8 @@
 package com.mycompany.calculettemaven;
 
 
+
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -119,6 +121,7 @@ public class Calculatrice implements ActionListener {
                 operation = "";
                 resultat = 0;
                 debutCalcul = true;
+                lanceSon();
             }
 
             if (orig.equals("C")) {
@@ -226,4 +229,17 @@ public class Calculatrice implements ActionListener {
         modeResultat = false;
     }
 
+    
+    public void lanceSon(){
+        new Thread(new Runnable() {
+            public void run(){
+                try {
+                  Sound s = new Sound("/sound.mp3");
+                  s.play();
+                } catch (Exception ex) {
+                    System.out.println("exception");
+                }
+            }
+        }).start();
+    }
 }

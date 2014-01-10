@@ -5,6 +5,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
+
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
@@ -15,6 +17,8 @@ import javax.swing.JFrame;
 */
 public class VueCalculatrice extends JFrame implements WindowListener
 {
+    
+    
         private javax.swing.JPanel pnlPrincipal = null;
         private javax.swing.JPanel pnlNombres = null;
         private javax.swing.JPanel pnlOperateurs = null;
@@ -237,6 +241,7 @@ public class VueCalculatrice extends JFrame implements WindowListener
                 if (s.substring(s.length() - 2).equals(".0"))
                         s = s.substring(0, s.length() - 2);
                 getTxtSaisie().setText(s);
+                             
         }
         /**
          * Permet d'ajouter un chiffre à l'afficheur.
